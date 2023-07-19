@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+}
+.main{
+    margin-top: 70px;
+    text-align: center;
+    color: white;
+    border: 2px solid #969696;
+    border-radius: 8px;
+    width: 1000px;
+    height:800px;
+    padding:100px;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 50px;
+  }
+  
+  .upload{
+  	margin: 50px;
+  	}
+  .photo{
+  	width: 300px;
+    	height:200px;
+  }	     
+  .butt{
+    border: none;
+    background-color: gainsboro;
+    border-radius: 8px;
+    padding: 1px 72px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    height:50px;
+  }
+  .butt:hover{
+    color: white;
+    background-color: gray;
+  }
+ .result a{
+ 	color: white;
+ 	}

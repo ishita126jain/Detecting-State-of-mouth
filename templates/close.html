@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of mouth</title>
+    <link rel = "stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    
+    <div class="main" id="home">
+    <h1>Detect State of human mouth (Closed or Open)</h1>
+    <br>
+    <p>Upload photo, analyze for open or closed mouth. Report results indicating whether mouth are open or closed.</p>
+     <p><b>Note:</b>It is very important to upload or capture clear and full image. Person's face should be straight.</p>
+    
+  
+    <div class="upload">
+    	<form action="{{url_for('upload')}}" method="post"  enctype="multipart/form-data">
+    	<input type="file" name="image">
+        <button  type="submit" class="butt">Upload Image</button>
+        </form>
+        
+        {% if photo_path %}
+        <br>
+        <img src="{{ photo_path }}" alt="Uploaded Photo" class="photo">
+    	{% else %}
+        <p>No photo uploaded yet.</p>
+    	{% endif %}
+        </div>
+        <h5>OR</h5>
+        <div class="upload">
+            <form action="{{url_for('capture')}}" method="POST">
+           
+            <button type="submit" class="butt">Capture Image</button>
+            </form>
+    
+            {% if image_path %}
+            <br>
+            <img src="{{ image_path }}" alt="Captured image" class="photo">
+            {% else %}
+            <p>No photo uploaded yet.</p>
+            {% endif %}
+            </div>      
+            <div>
+                <h1> Result: Person's mouth is closed </h1>
+            </div>
+        
+    </div>
+   
+
+    
+</body>
+</html>
+
